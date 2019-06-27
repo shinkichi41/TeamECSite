@@ -1,0 +1,364 @@
+@charset "UTF-8";
+
+/*共通*/
+BODY, html{
+	WIDTH: 100%;
+	MARGIN: 0;
+	MARGIN-BOTTOM: 20px;
+}
+
+/* 画面名 */
+h1{
+	clear: left;
+	font-size: 150%;
+	color: #5D9973;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 1%;
+	margin-bottom: 2%;
+	margin-left: 2.5%;
+	border-top: 2px solid #5D9973;
+	border-bottom: 2px solid #5D9973;
+	padding: 1% 0;
+	width: 95%;
+}
+
+/* ボタン */
+.button{
+	border-style:none;
+	background-color:#1a4429;
+	color:white;
+	border-radius:20px;
+	padding:10px 20px;
+	border:1px solid white;
+	box-shadow:1px 3px #0f4624;
+	width:140px;
+}
+
+.button_pos{
+	text-align:center;
+	margin-top:20px;
+}
+
+.button:hover{
+	transition:0.5s;
+	cursor:pointer;
+	opacity:0.5;
+}
+
+.button:active{
+	transition:0s;
+	position:relative;
+	top:2px;
+	box-shadow:none;
+}
+
+/* メッセージ用 */
+.complete {
+	width:90%;
+	color:#2a83a2;
+	text-align:center;
+	border:1px solid #2a83a2;
+	background-color:#a0d8ef;
+	font-size:12px;
+	padding:10px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.errorBlue {
+	width:90%;
+	color:#ff8c00;
+	text-align:center;
+	border:1px solid #ff8c00;
+	background-color:#fff3b8;
+	font-size:12px;
+	padding:10px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.errorRed {
+	width:90%;
+	color:#ff0000;
+	text-align:center;
+	border:1px solid red;
+	background-color:#f5b1aa;
+	font-size:12px;
+	padding:10px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+/* テーブル(ログイン、新規ユーザー、パスワード、宛先情報) */
+table.box{
+	width: 95%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 1px solid #ccc;
+	font-size:15px;
+	margin-top:-1px;
+	margin-bottom:35px;
+	margin:0 auto;
+}
+
+table.box th, td {
+	margin : 2%;
+	border-collapse: collapse;
+}
+
+table.box th{
+	width:20%;
+	padding:7px;
+	color:#ffffff;
+	background-color:#5D9973;
+	border: 1px solid #ccc;
+	text-align:left;
+	border-collapse: collapse;
+	height: 18px;
+}
+
+table.box td{
+	width:80%;
+	padding:10px;
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	border-spacing:0;
+	font-size:18px;
+}
+
+.txt{
+	width: 100%;
+	height: 20px;
+	font-size:18px;
+}
+
+/* ヘッダー */
+#all{
+	height: 55px;
+	background-color: #5D9973;
+	padding-top: 1%;
+	padding-left: 2%;
+}
+
+#name{
+	color: white;
+	margin-top: 18%;
+	font-size: 20px;
+}
+
+.search{
+	margin-top: 10%;
+}
+
+#form{
+	float: left;
+	margin-left: 1%;
+}
+
+#keyword{
+	border: 1px solid blue;
+	border-radius: 10px;
+	padding: 1% 1% 1% 4%;
+	height: 10%;
+	margin-top: 7%;
+	margin-right: 10%;
+}
+
+/*ログイン画面*/
+#txt_login{
+	background-color: #FFFFCC;
+}
+
+#checked{
+	font-size:10px;
+}
+
+.checkbox{
+	margin-left: 3%;
+	margin-top:2%;
+}
+
+/* 商品一覧画面 */
+#product-list ul li {
+	list-style-type : none;
+}
+
+.product-list-box {
+	display:inline-block;
+	float : left;
+	width:33.3%;
+	height: 300px;
+	text-align:center;
+}
+
+a{text-decoration: none;
+}
+
+/*商品詳細*/
+.detailsbox{
+	margin-top : 10px;
+	margin-left : 10%;
+}
+
+.left {
+	float : left;
+	width : 350px;
+	height : 325px;
+	margin-bottom:10%;
+}
+
+.right {
+	float:left;
+	width : 400px;
+	height : 325px;
+}
+
+div.btn{
+	clear:both;
+	display:block;
+	margin-top:20px;
+	text-align:center;
+}
+
+table.vertical-list-table-mini {
+	width: 100%;
+	border-spacing: 0;
+	text-align: left;
+	line-height: 1.5;
+	border: 4px double #ccc;
+	font-size:15px;
+}
+
+table.vertical-list-table-mini th {
+	width: 35%;
+	padding: 10px;
+	font-weight:900;
+	vertical-align: middle;
+	text-align:left;
+	border: 1px solid white;
+	background:#5D9973;
+	color:white;
+}
+
+table.vertical-list-table-mini td {
+	width: 65%;
+	padding: 10px;
+	vertical-align: middle;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.product-details-recommend-box{
+	margin-top:20%;
+	margin-bottom:10%;
+	margin-left:5%;
+	clear:both;
+}
+
+.product-details-recommend-box h2{
+	text-align:center;
+}
+
+.recomend-box{
+	float:left;
+	width:33.3%;
+}
+
+.item-image-box-100 {
+	width : 100px;
+	height : 100px;
+}
+
+.item-image-box-200 {
+	width : 200px;
+	height : 200px;
+}
+
+.item-image-box-320 {
+	width : 320px;
+	height : 320px;
+}
+
+/*テーブル(カート、決済、購入履歴)*/
+table.horizonBox{
+	width:87%;
+	margin:0 auto;
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+	font-size:15px;
+}
+
+table.horizonBox tr{
+	border:1px solid #ccc;
+	heigth:100px;
+}
+
+table.horizonBox th{
+	width:100px;
+	padding:10px;
+	border:1px solid #ccc;
+	background-color:#5D9973;
+	color:white;
+	margin:0;
+}
+
+table.horizonBox th.check {
+	padding:0;
+	text-align:center;
+	width:20px;
+}
+
+table.horizonBox th.radio{
+	padding:0;
+	text-align:center;
+	width:20px;
+}
+
+table.horizonBox td{
+	border:1px solid #ccc;
+	padding:10px;
+	margin:0;
+}
+
+table.horizonBox td.gazo {
+	text-align:center;
+}
+
+/*カート画面*/
+.sum {
+	display:inline-block;
+	float:right;
+	margin-top:20px;
+	margin-right:13%;
+	font-weight:bold;
+	color:#778899;
+}
+
+.settlement {
+	clear:both;
+	float:left;
+	display:inline-block;
+	margin-top:30px;
+	margin-left:30%;
+}
+
+.delete {
+	display:inline-block;
+	float:right;
+	margin-top:30px;
+	margin-right:15%;
+}
+
+#delete:disabled {
+	transition:0s;
+	cursor:auto;
+	opacity:1;
+	top:0px;
+	box-shadow:1px 3px #ccc;
+	background:#ccc;
+}
+
+.bottom {
+	height:125px;
+}
