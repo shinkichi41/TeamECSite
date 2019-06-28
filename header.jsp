@@ -4,9 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="./css/style.css">
-<title>ヘッダー</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>ヘッダー</title>
 </head>
 <body>
 	<div id="all">

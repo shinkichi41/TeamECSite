@@ -4,8 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>ホーム画面</title>
+	<meta charset="UTF-8">
+	<title>ホーム画面</title>
 </head>
 <body>
 	<jsp:include page="header.jsp" />

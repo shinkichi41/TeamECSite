@@ -55,10 +55,10 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		}
 
 		//ログイン認証
-		UserInfoDAO userDao = new UserInfoDAO();
-		if(userDao.isExistsUserInfo(userId, password)
-			&& userDao.login(userId, password) > 0){
-				int logined = userDao.login(userId, password);
+		UserInfoDAO userDAO = new UserInfoDAO();
+		if(userDAO.isExistsUserInfo(userId, password)
+			&& userDAO.login(userId, password) > 0){
+				int logined = userDAO.login(userId, password);
 
 			//カートの情報を紐付ける
 			String tempUserId = session.get("tempUserId").toString();
@@ -93,8 +93,8 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			}
 
 			//ユーザー情報をsessionに登録
-			UserInfoDTO userDto = userDao.getUserInfo(userId, password);
-			session.put("userId", userDto.getUserId());
+			UserInfoDTO userDTO = userDAO.getUserInfo(userId, password);
+			session.put("userId", userDTO.getUserId());
 			session.put("loginFlg", 1);
 
 		}else{
@@ -107,22 +107,22 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	//DBのカート情報を更新・作成
 	private boolean changeCart(List<CartInfoDTO> listForTemp, String tempUserId) {
 		int count = 0;
-		CartInfoDAO cartDao = new CartInfoDAO();
+		CartInfoDAO cartDAO = new CartInfoDAO();
 		boolean result = false;
 
-		for(CartInfoDTO cartDto : listForTemp){
+		for(CartInfoDTO cartDTO : listForTemp){
 			//session(画面に表示されている)カート情報と同じ商品情報がDBに存在するかチェック
-			if(cartDao.isExistsCartInfo(userId, cartDto.getProductId())){
+			if(cartDAO.isExistsCartInfo(userId, cartDTO.getProductId())){
 				//存在する場合、購入個数を更新し仮ユーザーIDのデータを削除
-				count += cartDao.updateProductCount(userId, cartDto.getProductId(), cartDto.getProductCount());
-				cartDao.deleteTempUserCartInfo(tempUserId, String.valueOf(cartDto.getProductId()));
+				count += cartDAO.updateProductCount(userId, cartDTO.getProductId(), cartDTO.getProductCount());
+				cartDAO.deleteTempUserCartInfo(tempUserId, String.valueOf(cartDTO.getProductId()));
 			}else{
 				//存在しない場合、tempUserIdをuserIdに変更
-				count += cartDao.updateCartInfoUserId(userId, tempUserId, cartDto.getProductId());
+				count += cartDAO.updateCartInfoUserId(userId, tempUserId, cartDTO.getProductId());
 			}
 		}
 		if(count == listForTemp.size()){
-			cartInfoList = cartDao.getCartInfoList(userId);
+			cartInfoList = cartDAO.getCartInfoList(userId);
 			int intTotalPrice = 0;
 			for(int n=0; n<cartInfoList.size(); n++) {
 				intTotalPrice += Integer.parseInt(cartInfoList.get(n).getProductPrice());

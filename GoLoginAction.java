@@ -9,7 +9,6 @@ import com.opensymphony.xwork2.ActionSupport;
 public class GoLoginAction extends ActionSupport implements SessionAware{
 
 	private Map<String,Object> session;
-	private boolean userIdCheck;
 
 	public String execute(){
 
@@ -29,14 +28,6 @@ public class GoLoginAction extends ActionSupport implements SessionAware{
 	@Override
 	public void setSession(Map<String,Object> session){
 		this.session = session;
-	}
-
-	public boolean getUserIdCheck(){
-		return userIdCheck;
-	}
-
-	public void setUserIdCheck(boolean userIdCheck){
-		this.userIdCheck = userIdCheck;
 	}
 
 }

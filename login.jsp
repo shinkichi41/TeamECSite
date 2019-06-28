@@ -4,34 +4,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>ログイン画面</title>
+	<meta charset="UTF-8">
+	<title>ログイン画面</title>
 </head>
 <body>
 	<jsp:include page="header.jsp" />
 	<h1>ログイン画面</h1>
 	<div>
 		<s:if test="userIdError != null && userIdError.size() > 0">
-			<div class="message">
-				<div class="errorRed">
-					<s:iterator value="userIdError" ><s:property/><br></s:iterator>
-				</div>
+			<div class="errorRed">
+				<s:iterator value="userIdError" ><s:property/><br></s:iterator>
 			</div>
 		</s:if>
 
 		<s:if test="passwordError != null && passwordError.size() > 0">
-			<div class="message">
-				<div class="errorRed">
-					<s:iterator value="passwordError"><s:property/><br></s:iterator>
-				</div>
+			<div class="errorRed">
+				<s:iterator value="passwordError"><s:property/><br></s:iterator>
 			</div>
 		</s:if>
 
 		<s:if test="userErrorMessage != null">
-			<div class="message">
-				<div class="errorRed">
-					<s:property value="userErrorMessage"/><br>
-				</div>
+			<div class="errorRed">
+				<s:property value="userErrorMessage"/><br>
 			</div>
 		</s:if>
 	</div>
